@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="refresh" content="2; url=$(link-orig)">
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="-1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Circle Creative Office</title>
+		<link rel="shortcut icon" type="image/png" href="favicon.png">
+		<link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
+	    <link href="assets/fonts/maven-pro/maven-pro.css" rel="stylesheet" type="text/css">
+
+	    <link rel="stylesheet" type="text/css" media="all" href="assets/css/animate.css">
+	    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
+	    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/aos/aos.css">
+	    <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+
+	    <script language="JavaScript">
+		<!--
+		    var popup = '';
+		    function openOrig() {
+			if (window.focus) popup.focus();
+			location.href = '$(link-orig)';
+		    }
+		    function openAd() {
+			location.href = '$(link-redirect)';
+		    }
+		    function openAdvert() {
+			if (window.name != 'hotspot_advert') {
+				popup = open('$(link-redirect)', 'hotspot_advert', '');
+				setTimeout("openOrig()", 1000);
+				return;
+			}
+			setTimeout("openAd()", 1000);
+		    }
+		//-->
+		</script>
+	</head>
+	<body onLoad="openAdvert()" class="d-flex align-items-center">
+		<main>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-4 col-md-6 text-center" data-aos="fade-down">
+						<div class="box-white">
+							<p>Advertisement</p>
+							If nothing happens, open <a href="$(link-redirect)" target="hotspot_advert">advertisement</a> manually.
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+		<script type="text/javascript" src="assets/js/waypoint.js"></script>
+	    <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
+	    <script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
+	    <script type="text/javascript" src="assets/packages/aos/aos.js"></script>
+	    <script type="text/javascript" src="assets/js/theme.js"></script>
+	</body>
+</html>

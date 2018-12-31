@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="expires" content="-1" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Circle Creative Office</title>
+		<link rel="shortcut icon" type="image/png" href="favicon.png">
+		<link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet" type="text/css">
+	    <link href="assets/fonts/maven-pro/maven-pro.css" rel="stylesheet" type="text/css">
+
+	    <link rel="stylesheet" type="text/css" media="all" href="assets/css/animate.css">
+	    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/bootstrap/bootstrap.css">
+	    <link rel="stylesheet" type="text/css" media="all" href="assets/packages/aos/aos.css">
+	    <link rel="stylesheet" type="text/css" media="all" href="assets/css/theme.css">
+	</head>
+	<body>
+		<main>
+			$(if chap-id)
+				<form name="sendin" action="$(link-login-only)" method="post">
+					<input type="hidden" name="username" />
+					<input type="hidden" name="password" />
+					<input type="hidden" name="dst" value="$(link-orig)" />
+					<input type="hidden" name="popup" value="true" />
+				</form>
+
+				<script type="text/javascript" src="md5.js"></script>
+				<script type="text/javascript">
+				<!--
+					function doLogin() {
+					document.sendin.username.value = document.login.username.value;
+					document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+					document.sendin.submit();
+					return false;
+					}
+				//-->
+				</script>
+			$(endif)
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-8 col-md-7">
+						<div class="brand-info d-flex align-items-center" data-aos="fade-down">
+							<div>
+								<div class="logo">
+									<a href="http://circle-creative.com/" target="_blank">
+										<img src="assets/img/logo.png">
+									</a>
+								</div>
+								<h4 class="text-light font-weight-normal mt-3">"Ya inilah bumi, sebelum kita meninggalkannya. Tempatmu tumbuh, bersama yang lain, menjadi bagian dari cerita hidupmu, mudah-mudahan yang indah dikenang" - Pidi Baiq</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-5 px-md-0 px-3" data-aos="fade-down">
+						<div class="login d-flex justify-content-center align-items-center">
+							<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+	                            <input type="hidden" name="dst" value="$(link-orig)" />
+	                            <input type="hidden" name="popup" value="true" />
+	                            <div class="s-login">
+	                            	<div class="logo-black d-lg-none d-md-none d-block">
+	                            		<a href="http://circle-creative.com/" target="_blank">
+											<img src="assets/img/logo.png">
+										</a>
+	                            	</div>
+									<h3>Login</h3>
+									<p>Please enter your username and password!</p>
+									$(if error)
+	                                <div class="alert alert-danger">
+	                                  <strong>Error!</strong> $(error).
+	                                </div>
+	                                $(endif)
+									<div class="form-group">
+		                                <input type="text" name="username" class="username form-control" value="$(username)" placeholder="Username" />
+		                            </div>
+		                            <div class="form-group">
+		                                <input type="password" name="password" class="password form-control" placeholder="Password"/>
+									</div>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary btn-block">Login</button>
+								</div>
+
+	                            $(if trial == 'yes')
+									<!-- <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)" class="btn btn-logout text-space">COBA GRATIS</a> -->
+	                            $(endif)
+								<p class="text-center">
+									<small>Copyright &copy; 1998 - 2018 PT. Lingkar Kreasi (Circle Creative) - All rights reserved.</small>
+								</p>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+		<script type="text/javascript" src="assets/js/waypoint.js"></script>
+	    <script type="text/javascript" src="assets/packages/bootstrap/libraries/popper.js"></script>
+	    <script type="text/javascript" src="assets/packages/bootstrap/bootstrap.js"></script>
+	    <script type="text/javascript" src="assets/packages/aos/aos.js"></script>
+	    <script type="text/javascript" src="assets/js/theme.js"></script>
+		<script type="text/javascript">
+		  	document.login.username.focus();
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,24 @@
+@mixin device($media) {
+    @if $media == mobile {
+        @media only screen and (max-width: 768px - 1) { @content; }
+    }
+    @else if $media == tablet {
+        @media only screen and (min-width: 768px) and (max-width: 992px - 1) { @content; }
+    }
+    @else if $media == desktop {
+        @media only screen and (min-width: 992px) and (max-width: 1200px - 1) { @content; }
+    }
+    @else if $media == desktop-up {
+        @media only screen and (min-width: 1200px) { @content; }
+    }
+    @else if $media == hd {
+        @media only screen and (min-width: 1280px + 1) { @content; }
+    }
+    @else if $media == hdd {
+        @media only screen and (min-width: 1300px + 1) { @content; }
+    }
+
+    @else if $media == hdd-up {
+        @media only screen and (min-width: 1400px) { @content; }
+    }
+}

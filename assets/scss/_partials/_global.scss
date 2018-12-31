@@ -1,0 +1,133 @@
+body {
+	color: $gray-dark;
+	font-size: 1rem;
+	font-family: "Maven Pro", Arial, sans-serif;
+    font-weight: normal;
+    background-image: url('../img/development.jpg');
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    @include device(tablet) {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    @include device(mobile) {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+        padding: 5% 0;
+        background-color: $white;
+    }
+
+    &:after {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: rgba(38,50,56,.6);
+
+        @include device(mobile) {
+            display: none;
+        }
+
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: none !important;
+    font-weight: 500 !important;
+}
+
+.btn-primary{
+    background: $primary-color;
+    border-color: $primary-color;
+
+    &:hover, &:focus{
+        background: $primary-color;
+        border-color: $primary-color;
+    }
+}
+
+.btn{
+    &.focus, &:focus{
+        box-shadow: none;
+    }
+}
+
+.bg-primary{
+    background-color: $primary-color !important;
+}
+
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: lighten($gray-light, 20%) !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: lighten($gray-light, 20%) !important; 
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: lighten($gray-light, 20%) !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: lighten($gray-light, 20%) !important;
+}
+
+main{
+    width: 100%;
+}
+
+.brand-info{
+    height: 100vh;
+    padding: 10%;
+
+    @include device(mobile) {
+        height: 0px;
+        padding: 0;
+        display: none;
+        overflow: hidden;
+
+        div{
+            height: 0px;
+            display: none;
+            overflow: hidden;
+        }
+    }
+}
+
+.logo-black{
+    img{
+        -webkit-filter: invert(1); /* Safari 6.0 - 9.0 */
+        filter: invert(1);
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+}
+
+.login{
+    height: 100vh;
+    padding: 10%;
+    background-color: $white;
+
+    @include device(mobile) {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    form{
+        width: 100%;
+    }
+}
+
+.box-white{
+    background-color: $white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
