@@ -10,7 +10,7 @@ Just plug and play on your MikroTik router.
 ## Screenshots
 
 ### Mobile Friendly
-![alt login](https://github.com/teguhrianto/responsive-mikrotik-template-bootstrap4/raw/master/screenshot/desktop.png)
+![alt login](https://github.com/teguhrianto/responsive-mikrotik-template-bootstrap4/raw/master/screenshot/circlecreative-mikrotik-template.png)
 
 ### Login
 ![alt login](https://github.com/teguhrianto/responsive-mikrotik-template-bootstrap4/raw/master/screenshot/desktop.png)
